@@ -1,0 +1,21 @@
+def convert_to_bin(number): #do desiatkovej sustavy
+    pow_teen = 1
+    result = 0
+    while number !=0:
+        modulo = number % 2 #zvysok po delení dvomi je to 0 a 1
+        result = result+pow_teen*modulo #zbierame odzadu zvysky a nasobime desiatimi
+        number = number // 2 #celociselne delenie dvomi
+        pow_teen *=10 #mocnina
+    return result
+print(convert_to_bin(10))
+
+def bin_to_dec(number): #z desiatkovej susutavy
+    pow_teen = 1
+    result = 0
+    while number !=0:
+        modulo = number % 2
+        result = result+pow_teen*modulo
+        number = number // 10
+        pow_teen *=2 #poslednym cislom nasobim mocninami dvojky
+    return result
+print(bin_to_dec(1010))
