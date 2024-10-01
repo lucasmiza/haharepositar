@@ -13,7 +13,7 @@ def bin_to_dec(number): #z desiatkovej susutavy
     pow_teen = 1
     result = 0
     while number !=0:
-        modulo = number % 2
+        modulo = number % 10
         result = result+pow_teen*modulo
         number = number // 10
         pow_teen *=2 #poslednym cislom nasobim mocninami dvojky
