@@ -1,0 +1,41 @@
+#scitanie neparnych cisel
+def cifra(cislo):
+    cifra = 0 #priradenie hodnoty, inicializovali sme cifru s hodnotou 0
+    while cislo >0: #cyklus
+        ld = cislo % 10 #odtrhne sa poslednu cifru
+        if ld%2==1:
+             cifra +=ld
+        cislo = cislo//10 #pripravi cislo do dalsieho cyklu tym ze ho znizi o jednu cifru
+    return cifra
+print(cifra(123))
+
+#scitanie parnych cisel
+def cifra(cislo):
+    cifra = 0
+    while cislo >0:
+        ld = cislo % 10
+        if ld%2==0:
+             cifra +=ld
+        cislo = cislo//10
+    return cifra
+print(cifra(123))
+
+#scitanie cisel
+def cifra(cislo):
+    cifra = 0
+    while cislo >0:
+        ld = cislo % 10
+        cifra +=ld
+        cislo = cislo//10
+    return cifra
+print(cifra(123))
+
+#napise cislo odzadu
+def cifra2(cislo):
+    cifra = 0
+    while cislo >0:
+        ld = cislo % 10
+        cifra = cifra *10+ld
+        cislo = cislo//10
+    return cifra
+print(cifra2(123))
