@@ -1,0 +1,27 @@
+def fun_1(n):
+    cifra = 0
+    while n>0:
+        poc_cis = n % 10
+        cifra += 1
+        n = n // 10
+    return cifra
+
+def fun_2(n):
+    cifra = fun_1(n)
+    b = 0
+    if cifra % 2 == 0:
+        stredne1 = n % (10**(cifra//2))
+        while stredne1 > 10:
+            stredne1 = stredne1 // 10
+        stredne2 = n // (10**(cifra//2))
+        while stredne2 > 10:
+            stredne2 = stredne2 % 10
+        b = (stredne1 + stredne2) / 2
+        print(b)
+    else:
+        cif = cifra /2+0.5
+        stredna3 = n % (10**cif)
+        while stredna3 > 10:
+            stredna3 = stredna3 // 10
+        print(int(stredna3))
+print(fun_2(1234))
