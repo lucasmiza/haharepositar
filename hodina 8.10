@@ -38,3 +38,5 @@ def is_perfect(n):
             return False
 for i in range (1,101): #ktore cisla v intervale su dokonale
     print(i, is_perfect(i))
+
+
