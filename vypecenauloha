@@ -1,0 +1,53 @@
+def poc_cif (n): #pocita kolko cifier je v cisle
+    poc = 0
+    while n!=0:
+        poc = poc + 1
+        n = n // 10
+    return poc
+print(poc_cif(145))
+
+def schreder (n):
+    if poc_cif(n) % 2 ==0:
+        pozicia = poc_cif(n) //2 #zistim poziciu cisla ktore si zapamata
+
+        while n!=0:
+            poc = poc +1
+            if poc == pozicia or poc == pozicia+1:
+                sucet = sucet + n%10
+            n = n //10
+        return sucet
+    else:
+        pozicia = poc_cif(n) //2
+        sucet = 0
+        poc = 0
+        while n!=0:
+            poc = poc +1
+            if poc == pozicia+1:
+                sucet = sucet + n%10
+            n = n //10
+        return sucet
+
+print(schreder(145))
+
+#uloha9
+
+def odzadu(cislo):
+    odzadu = 0
+    while cislo >0:
+        ld = cislo % 10
+        odzadu = odzadu *10+ld
+        cislo = cislo//10
+    return odzadu
+print(odzadu(222))
+
+def symetr(n):
+    if odzadu == n:
+        print ("je symetricke")
+    else:
+        print ("nie je symetricke")
+
+print(symetr(222))
+
+
+
+
