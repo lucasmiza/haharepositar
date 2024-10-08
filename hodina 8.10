@@ -1,0 +1,40 @@
+def colatz(n):
+    while n!=1:
+        if n%2 == 0:
+            n//=2 # n=n //2
+            print(n, end=",")
+        else:
+            n = 3*n+1
+            print(n, end=",")
+    print()
+for i in range (1,10):
+    colatz(i)
+
+
+def fun(n):
+    delit= 2
+    while n!=1:#nerovna sa jednej
+        if n%delit ==0:
+            print(delit)
+            n = n // delit
+        else:
+            delit = delit + 1
+fun(12)
+
+#rozdeli cislo na vsetkych moznych delitelov a scita ich dokopy
+def sucdel(n):
+    sucet = 0
+    for i in range(1, n+1):
+        if n%i ==0:
+            sucet +=i
+    return sucet
+print(sucdel(6))
+
+#ci je cislo dokonale, dokonale je ked sucet jeho delitelov je dvojnasobkom povodneho cisla
+def is_perfect(n):
+        if sucdel(n) == n*2:
+            return True
+        else:
+            return False
+for i in range (1,101): #ktore cisla v intervale su dokonale
+    print(i, is_perfect(i))
