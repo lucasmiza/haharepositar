@@ -1,0 +1,7 @@
+import random
+sucet = 0
+for i in range(0, 101):
+    temp = random.randrange(1,10)
+    sucet = temp + sucet
+print(sucet)
+print(sucet/100) #ich priemer
