@@ -1,0 +1,15 @@
+#vypis vsetky parne cisla od 42 do 100
+def fun(p, d):
+    for i in range (p, d+1, 2):
+        print(i)
+fun(42,100)
+
+#nacitat cisla pokial ich sucet nie je vacsi ako 500
+sucet = 0
+pocet = 0
+while sucet <500:
+    temp = int(input("zadaj mi cislo:"))
+    if temp % 2 ==0: #len pre parne cisla
+        pocet = pocet + 1
+        sucet = sucet + temp
+print(sucet/pocet)
