@@ -27,3 +27,18 @@ print("5:"+str(e))
 print("6:"+str(f))
 
 #kolkokrat padne ake cislo ked hadzeme kockou
+
+
+#jednoduchsie
+
+import random
+jozo = [] # vytvorila som zoznam, ktory je zatial prazdny, po anj - list
+for i in range (0,6):
+    jozo.append(0)
+
+print(jozo)
+
+for i in range(0,1000):
+    temp = random.randrange(1,7)
+    jozo[temp-1]=jozo[temp-1]+1 #do hrnatych zatvoriek sa dava index
+print (jozo)
