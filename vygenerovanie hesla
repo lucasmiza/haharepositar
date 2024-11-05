@@ -1,0 +1,11 @@
+import random
+dlzka = int(input("napis mi dlzku:"))
+samohlasky = 'aeiouy'
+spoluhlasky = 'qwrtpsdfghjklzxcvbnm'
+novyret = ''
+for i in range (0, dlzka):
+    if i%2 ==0:
+        novyret = novyret + random.choice(samohlasky) #nahodne vyberie pismenko z retazca samohlasky
+    else:
+        novyret = novyret + random.choice(spoluhlasky)
+print(novyret)
