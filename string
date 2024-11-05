@@ -1,0 +1,17 @@
+a = input ("napis mi nieco:")
+print(a.count('c'))
+#kolkokrat je v retazci pismeno c
+
+
+b = "Ahoj1#~"
+print(len(b))
+
+for i in b:
+    print (i)
+
+#pytam sa na poziciu
+for i in range (0, len(b)):
+    print(i,b[i])
+#same shit different day
+for index, hodnota in enumerate(b):
+    print(index, hodnota)
