@@ -2,6 +2,22 @@ a = input ("napis mi nieco:")
 print(a.count('c'))
 #kolkokrat je v retazci pismeno c
 
+a = input ("napis mi nieco:")
+b = input("napism mi pismeno ktore hladas:")
+print(a.count(b))
+
+#vsetky acka zmenime na becka
+a = input("napis mi nieco:")
+na = ''
+for znak in a:
+    if znak =='a':
+        na = na + 'e' #plus znamena prilepenie znaku nie spocitanie
+    else:
+        na = na + znak
+print(na)
+
+
+
 
 b = "Ahoj1#~"
 print(len(b))
@@ -15,3 +31,4 @@ for i in range (0, len(b)):
 #same shit different day
 for index, hodnota in enumerate(b):
     print(index, hodnota)
+
