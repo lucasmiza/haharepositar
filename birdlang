@@ -1,0 +1,16 @@
+dlzka = str(input("napis mi slovo:"))
+samohlasky = 'aeiouy'
+spoluhlasky = 'qwrtpsdfghjklzxcvbnm'
+noveslovo = ''
+a = 0
+while a<len(dlzka):
+    if dlzka[a]in samohlasky:
+        noveslovo = noveslovo + dlzka[a]
+        a = a+3
+    elif dlzka[a] in spoluhlasky:
+        noveslovo = noveslovo + dlzka[a]
+        a = a+2
+    else:
+        noveslovo = noveslovo + " "
+        a = a+1
+print(noveslovo)
