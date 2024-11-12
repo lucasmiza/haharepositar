@@ -1,0 +1,15 @@
+a = input("napis mi nieco:")
+for i in range (0,len(a)+1):
+    print(a[:i:])
+
+#a
+#ab
+#abr
+#abra
+#abrak
+#abraka
+#abrakad
+#abrakada
+#abrakadab
+#abrakadabr
+#abrakadabra
