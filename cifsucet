@@ -1,0 +1,6 @@
+#ciferny sucet
+a = input("zadaj mi cislo:")
+scitanie = 0
+for cislica in a :
+    scitanie = scitanie + int(cislica)
+print(scitanie)
