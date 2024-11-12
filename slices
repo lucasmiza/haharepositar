@@ -1,0 +1,11 @@
+fero = "gfghutghuthg"
+
+#jano = fero[start:koniec:krok]
+#jano = fero[1:3:] #pokial vynecham prve cislo hodnota bude 0
+#jano = fero[::-1] #obrati retazec od konca
+peto = "radar"
+niko = "jelenovi pivo nelej"
+tomas = "kobylamamalybok"
+if niko==niko[::-1]:
+    print ("je to palindrom")
+print(jano)
