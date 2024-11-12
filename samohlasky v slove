@@ -1,0 +1,8 @@
+def schreder(ret):
+    samo = "aeiouy"
+    for i in samo:
+        print("samohlaska " + i + " sa tam nachadza: ",ret.count(i))
+a = input("napis mi slovo:")
+schreder(a)
+
+#kolkokrat sa v slove nachadza aka samohlaska
