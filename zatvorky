@@ -8,3 +8,38 @@ a = input("napis mi nieco:")
 fun(a)
 
 #napise len slovo ktore je v zatvorke
+
+
+
+4
+
+opakuj(a)
+pokial while sa tam nachadza "(" tak:
+zavolam funkciu fun
+spravim nejake hujujubujuju aby som tu zatvorku od tial odstranil
+
+while a.find("(")!=-1 ak je rozne od -1
+fun(a)
+
+a[:zatvorka1:]+a[:zatvorka2:]
+
+
+#uloha 5
+def fun(a):
+    zatvorka1 = a.find("(")
+    zatvorka2 = a.find(")")
+    if zatvorka2-zatvorka1 > 0:
+        print(a[zatvorka1:zatvorka2+1:])
+
+
+def opakuj(a):
+    while a.find("(") != -1: #-1 znamena ze sa tam nenachadza
+        fun(a)
+        zatvorka1 = a.find("(")
+        zatvorka2 = a.find(")")
+        a = a[:zatvorka1:] + a[zatvorka2 + 1::]
+
+
+
+a = input("napis mi nieco:")
+opakuj(a)
