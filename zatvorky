@@ -1,0 +1,10 @@
+def fun(a):
+    zatvorka1 = a.find("(")
+    zatvorka2 = a.find(")")
+    if zatvorka2-zatvorka1 > 0:
+        print(a[zatvorka1:zatvorka2+1:])
+
+a = input("napis mi nieco:")
+fun(a)
+
+#napise len slovo ktore je v zatvorke
