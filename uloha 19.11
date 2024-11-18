@@ -20,3 +20,24 @@ def samohlaskyprec (a):
     print(novy)
 a = input ("Napis mi nieco:")
 samohlaskyprec(a)
+
+#Naprogramuj funkciu, ktorá zistí, koľko je v reťazci oznamovacích opytovacích a rozkazovacích viet.
+def pocetviet(a):
+    pocet_o = 0
+    pocet_op = 0
+    pocet_r = 0
+    oznamovacia = "."
+    opytovacia = "?"
+    rozkazovacia = "!"
+    for i in a:
+        if i in oznamovacia:
+            pocet_o += 1
+        elif i in opytovacia:
+            pocet_op += 1
+        elif i in rozkazovacia:
+            pocet_r += 1
+    print("oznamovacich viet je:" + str(pocet_o))
+    print("opytovacich viet je:" + str(pocet_op))
+    print("rozkazovacich viet je: " +str(pocet_r))
+a = input("zadaj text: ")
+pocetviet(a)
