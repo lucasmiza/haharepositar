@@ -1,0 +1,12 @@
+#Naprogramuj funkciu, ktorej argument bude ľubovoľný reťazec. Funkcia vráti počet veľkých písmen v reťazci.
+def pocet_velkych (a):
+    pocet = 0
+    for i in a:
+        if i.isupper():
+            pocet = pocet + 1
+    print (pocet)
+
+
+a = input("zadaj vetu:")
+pocet_velkych(a)
+
