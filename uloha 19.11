@@ -10,3 +10,13 @@ def pocet_velkych (a):
 a = input("zadaj vetu:")
 pocet_velkych(a)
 
+#Naprogramuj funkciu, ktorá odstráni z daného reťazca všetky samohlásky.
+def samohlaskyprec (a):
+    samohlasky = "aeiouy"
+    novy = ""
+    for i in a:
+        if i not in samohlasky:
+            novy = novy + i
+    print(novy)
+a = input ("Napis mi nieco:")
+samohlaskyprec(a)
