@@ -16,7 +16,7 @@ def samohlaskyprec (a):
     novy = ""
     for i in a:
         if i not in samohlasky:
-            novy = novy + i
+            novy = novy + i #prilepi k sebe
     print(novy)
 a = input ("Napis mi nieco:")
 samohlaskyprec(a)
@@ -41,3 +41,7 @@ def pocetviet(a):
     print("rozkazovacich viet je: " +str(pocet_r))
 a = input("zadaj text: ")
 pocetviet(a)
+
+def pocetviet(a):
+    return a.count("!") + a.count("?") + a.count(".")
+print(pocetviet("Ahoj. Ako?"))
