@@ -1,3 +1,4 @@
+#9
 def pocet_sam_sp(a):
     samohlasky = "aeiouy"
     spoluhlasky = "qwrtpsdfghjklxcvbnmz"
@@ -16,3 +17,26 @@ pocet_sam_sp("ahoj")
 def akysubor(a:str):
     pozicia = a.rfind()
     pozicia =  a[a+1::]
+
+
+ret[::-1] #obrati retazec naopak hahhahah
+
+#11
+def permutacia():
+    ret = "0123"
+    for i in ret:
+        for j in ret:
+            for k in ret:
+                for l in ret:
+                    print(i,j,k,l)
+permutacia()
+
+#12
+def permutacia():
+    ret = "ahoj"
+    for i in ret:
+        for j in ret:
+            for k in ret:
+                for l in ret:
+                    print(i,j,k,l)
+permutacia()
