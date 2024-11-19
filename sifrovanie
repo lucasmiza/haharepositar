@@ -1,0 +1,4 @@
+#ak je kluc vseobecne znamy = kodovanie
+#ak je kluc tajny = sifrovanie
+#ak existuje iba jeden kluc = symetricke sifrovanie (ceaserova sifra)
+#pri asymetrickom sifrovani existuju kluce dva - verejny a sukromny
