@@ -1,0 +1,18 @@
+def pocet_sam_sp(a):
+    samohlasky = "aeiouy"
+    spoluhlasky = "qwrtpsdfghjklxcvbnmz"
+    pocetsam = 0
+    pocetsp = 0
+    for i in a:
+        if i in samohlasky:
+            pocetsam +=1
+        if i in spoluhlasky:
+            pocetsp +=1
+    print(pocetsam)
+    print(pocetsp)
+pocet_sam_sp("ahoj")
+
+#10
+def akysubor(a:str):
+    pozicia = a.rfind()
+    pozicia =  a[a+1::]
