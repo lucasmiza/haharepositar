@@ -39,3 +39,27 @@ def checkio(heslo):
         return False
 assert checkio("dhUv6vvh11i") == True
 assert checkio("jjkjžk") == False
+
+
+#same shit different day
+def checkio2(heslo):
+    if len(heslo) >= 10:
+        status_digit = False
+        status_lower = False
+        status_upper = False
+        status_ascii = True
+        for i in heslo:
+            if i.isdigit(): #čekujem čislicu
+                status_digit = True
+            if i.islower():
+                status_lower = True
+            if i.isupper():
+                status_upper = True
+            if not(i.isascii()):
+                status_ascii = False
+        return status_digit and status_lower and status_upper and status_ascii #ak je tu and vsetky musia byt true
+    else:
+        return False
+assert checkio2("dhUv6vvh11i") == True
+assert checkio2("jjkjžk") == False
+
