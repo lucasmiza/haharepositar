@@ -20,10 +20,11 @@ def checkio(heslo):
                     if i.islower():
                         status2 = True
                     if status2:
-                        status3 = False
+                        status3 = True
+                        #kazdy znak musi byt ascii
                         for i in heslo:
-                            if i.isascii():
-                                status3 = True
+                            if not(i.isascii()):
+                                status3 = False
                         if status3:
                             return True
                         else:
@@ -37,4 +38,4 @@ def checkio(heslo):
     else:
         return False
 assert checkio("dhUv6vvh11i") == True
-assert checkio("jjkjk") == False
+assert checkio("jjkjžk") == False
