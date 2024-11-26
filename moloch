@@ -1,0 +1,40 @@
+# 1. ma viac alebo 10 znakov
+# 2. ma aspon jednu cislicu
+# 3. najmenej jedno velke a jedno male pismeno
+
+#čekujem dlžku
+def checkio(heslo):
+    if len(heslo) >= 10:
+        status = False
+        for i in heslo:
+            if i.isdigit(): #čekujem čislicu
+                status = True
+        if status: #čekujem velke pismeno
+            status1 = False
+            for i in heslo:
+                if i.isupper():
+                    status1 = True
+            if status1: #čekujem male pismeno
+                status2 = False
+                for i in heslo:
+                    if i.islower():
+                        status2 = True
+                    if status2:
+                        status3 = False
+                        for i in heslo:
+                            if i.isascii():
+                                status3 = True
+                        if status3:
+                            return True
+                        else:
+                            return False
+                    else:
+                        return False
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+assert checkio("dhUv6vvh11i") == True
+assert checkio("jjkjk") == False
