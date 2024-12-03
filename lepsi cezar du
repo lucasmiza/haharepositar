@@ -1,0 +1,26 @@
+#text = 'ahoj svety'
+#kluc = 'abc'
+#dlzka kluca bude vzdycky menej
+
+#ahoj svety
+#abcabcabca
+#123 - posuny
+#bjr - na co sa to premeni
+def sifruj(what:str, offset:int): #offset - posun
+    output = ""
+    for char in what:
+        if (97<=ord(char) and ord(char)<=122):
+            output+= chr((ord(char)-97+offset)%26+97)  
+        else: #ak nie je z malej abecedy, tak ho vratim taky aky je
+            output +=char
+    return output
+def predlzkluc(text, kluc):
+    kolko = len(text)//len(kluc)
+    zvysok = len(text) % len(kluc)
+    return kluc * kolko + kluc[:zvysok:]
+text1 = input("zadaj mi co ides zaheslovat:")
+kluc = input("zadaj mi kluc:")
+ret1 = predlzkluc(text1, kluc)
+
+def sifrovacka2(text1, ret1):
+    for i in range(0,len(text1)):
