@@ -2,3 +2,10 @@
 #ak je kluc tajny = sifrovanie
 #ak existuje iba jeden kluc = symetricke sifrovanie (ceaserova sifra)
 #pri asymetrickom sifrovani existuju kluce dva - verejny a sukromny
+
+hashovacie funkcie pre text - SHA256, MD5
+hash - jednoznacny otlacok textu
+
+dolezite veci:
+1. z hashu sa nikdy nevies dopatrat k povodnej sprave
+2. keby sa v tej sprave zmeni1 pismenko/znak/hocico cely hash sa zmeni
