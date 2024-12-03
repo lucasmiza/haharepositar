@@ -3,7 +3,14 @@ def sifruj(what:str, offset:int): #offset - posun
     output = ""
     for char in what:
         if (97<=ord(char) and ord(char)<=122):
-            output+= chr((ord(char)-97+offset)%26+97)  #spravi z c 99 potom sa odcita 97 a pripocita sa posun, vydelime 26
+            #temp - ord(char) #premenila som som si to na cislo
+            #temp1 = temp - 97 premenila som si to na interval od 0..25
+            #temp2 = temp + offset pripociala som si posunutie
+            #temp3 = temp2%26 zvysok sa vydeli aby posun nebolo velke cislo
+            #temp4 = temp3 +97 vrati sa to naspat na interval malych pismen
+            #output = chr(temp4) previedla som to naspat na znak
+            #ja uz som velka budem to robit to takto:
+            output+= chr((ord(char)-97+offset)%26+97)  
     return output
 
 print(sifruj('abyz',2))
