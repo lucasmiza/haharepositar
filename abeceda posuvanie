@@ -1,0 +1,9 @@
+#cesarova sifra
+def sifruj(what:str, offset:int): #offset - posun
+    output = ""
+    for char in what:
+        if (97<=ord(char) and ord(char)<=122):
+            output+= chr((ord(char)-97+offset)%26+97)  #spravi z c 99 potom sa odcita 97 a pripocita sa posun, vydelime 26
+    return output
+
+print(sifruj('abyz',2))
