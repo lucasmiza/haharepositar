@@ -14,3 +14,13 @@ def sifruj(what:str, offset:int): #offset - posun
     return output
 
 print(sifruj('abyz',2))
+
+
+#desifrovanie
+def desifruj(what:str, offset:int):
+    output1 = ""
+    for char in what:
+        if (97 <= ord(char) and ord(char) <= 122):
+            output1 += chr((ord(char)-97-offset)%26+97)
+    return output1
+print(desifruj('cdab',2))
