@@ -1,3 +1,4 @@
+#vypise co je mimo tagu
 import requests
 page = requests.get("https://www.sme.sk")
 brutal_string = page.text
@@ -10,3 +11,18 @@ for i in brutal_string: #ci je v tagu
             print(i, end="")
     if i ==">":
         is_in_tag = False
+
+#vypise co je vo vnutri tagu
+import requests
+page = requests.get("https://www.sme.sk")
+brutal_string = page.text
+is_in_tag = False
+for i in brutal_string: #ci je v tagu
+    if i =="<":
+        is_in_tag = True
+
+    if is_in_tag == True:
+            print(i, end="")
+
+    if i ==">":
+        is_in_tag = True
