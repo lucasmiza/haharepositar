@@ -5,3 +5,12 @@ zoz = []
 for i in range(0, len(s)):
     zoz.append(ord(s[i])) #ord najde ordinalne hodnoty
 print(zoz)
+
+
+#napisat program, ktory nacita lubovolne slovo a vytvori zoznam ktory bude obsahovat ordinalne hodnoty jeho znakov
+
+s = input("zadaj mi slovo:")
+zoz = []
+for i in s:
+    zoz.append(ord(i)) #ord najde ordinalne hodnoty
+print(zoz)
