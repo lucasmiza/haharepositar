@@ -1,0 +1,13 @@
+import random
+zoz = []
+vysledok = ""
+for i in range (0, 10):
+    zoz.append(random.randrange(0, 10000))
+for cislo in zoz:
+    vysledok += chr(cislo)
+
+print(zoz)
+print(vysledok)
+
+
+#opakuj kym tam nebude euro
