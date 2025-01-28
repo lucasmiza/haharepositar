@@ -1,0 +1,19 @@
+#vytvorit prazdny zoznam a potom ho naplnit 10timi random cislami zintervalu od 1-100 a kolko je parnych najst najvacsiu hodnotu
+import random
+zoz = []
+parnych = 0
+for i in range (0, 10): #lebo ma byt 10 cisel
+    zoz.append(random.randrange(1,101))
+for i in zoz:
+    if i % 2 ==0:
+        parnych += 1
+maxi = zoz[0]
+pozicia = 0
+for i in range(1, len(zoz)):
+    if maxi <= zoz[i]:
+        maxi = zoz[i]
+        pozicia = i
+
+print(zoz)
+print(maxi)
+print(f"pozicia najvacsieho cisla: {pozicia}")
