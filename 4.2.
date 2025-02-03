@@ -1,0 +1,67 @@
+import random
+def generuj(a):
+    cisla = []
+    for i in range(0, a):
+        cisla.append(random.randrange(5,10))
+    return cisla
+
+
+def sucet_parne(a):
+    spolu = 0
+    for i in a:
+        if i % 2 == 0:
+            spolu += i
+    return spolu
+
+
+
+def coho_je_viac(a):
+    parne = 0
+    neparne = 0
+    for i in a:
+        if i % 2 == 0:
+            parne += 1
+        else:
+            neparne += 1
+    if parne > neparne:
+        print("parne")
+    elif parne < neparne:
+        print("neparne")
+    else:
+        print("rovnako")
+
+
+
+def parne_pozicie(a):
+    cisla = []
+    for i in range(0, len(a), 2):
+        cisla.append(a[i])
+    return cisla
+
+
+
+def nie_cisla(a):
+    novy = []
+    for i in a:
+        if type(i) != int:
+            if type(i) != float:
+                novy.append(i)
+    return novy
+
+
+
+def spolu_do_retazca(a):
+    novy = ""
+    for i in a:
+        novy += str(i)
+    zoz = []
+    zoz.append(novy)
+    return zoz
+
+
+
+def zozam_mocnin(a):
+    mocniny = []
+    for i in range(1,a+1):
+        mocniny.append(i**2)
+    return mocniny
