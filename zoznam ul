@@ -1,0 +1,9 @@
+#naprogramuj funkciu ktora ak su vsetky hohnoty rovnake vrati true a ak nie false
+def fun(z):
+    for i in range (0, len(z)-1):
+        if z[i] != z[i+1]:
+            return False
+    return True
+print(fun([5,5,5,5]))
+
+
