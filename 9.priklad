@@ -1,3 +1,4 @@
+#ci su hodnoty v zozname usporiadane
 def je_usp(zoz):
     for i in range (0,len(zoz)-1):
         if zoz[i]>zoz[i+1]:
