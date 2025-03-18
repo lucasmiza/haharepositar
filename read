@@ -1,0 +1,18 @@
+fr = open("jozo.txt","r",encoding = "UTF-8")
+
+#budem potrebovat le jeden riadok
+#first_line = fr.readline() #prvy ridok
+#print(first_line)
+
+#first_line = fr.readline() #druhy iadok
+#print(first_line)
+
+#first_line = fr.readline() #treti iadok
+#print(first_line)
+
+#lines = fr.readlines()
+#print(lines)
+
+for i in fr:
+    print(i)
+    p = i.strip().split() #strip = odstrihne vsetky neviditelne znaky , split = rozdeli podla medzery alebo tab
