@@ -1,0 +1,4 @@
+fr = open("", "r", encoding = "UTF-8")
+def is_abecedarian
+    
+   
