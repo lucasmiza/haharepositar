@@ -1,0 +1,14 @@
+fr = open("slova.txt", "r", encoding = "UTF-8")
+
+slovo = slova.split()
+for a in slovo:
+    for pismenko in a:
+        hodnota = ord(pismenko)
+        if hodnota > pred:
+            pred = hodnota
+        else:
+            print False
+    else:
+        print True
+
+ord(slovo[i])< ord(slovo[i-1])
