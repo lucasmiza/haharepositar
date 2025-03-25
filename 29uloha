@@ -1,0 +1,22 @@
+r = open("kompresia_obrazka_1 (1).txt", "r", encoding = "UTF-8")
+fw = open("kompresia_obrazka_vystup.txt", "w", encoding = "UTF-8")
+def spracuj_riadok(riadok1):
+    vystup = ""
+    if riadok1[0] == "1": #ak sa prvy znak rovna nule do vystupu dame nulu
+        vystup+= "0 "
+    pocitadlo = 1
+    for  index in range(1, len(riadok1)):
+        if riadok[index]== riadok1[index-1]:
+            pocitadlo+= 1
+        else:
+            vystup+= str(pocitadlo)+ " "
+            pocitadlo = 1
+    vystup += str(pocitadlo) #zabezpeci aby sme zapisali poslednu hodnotu
+    fw.write(vystup + "\n")
+
+first_line = fr.readline()
+fw.write(first_line) #prvy riadok som tam hned prepisala
+sirka,dlzka = first_line.strip().split() #cool ale su to stringy
+for riadok in fr:
+    spracuj_riadok(riadok.strip())
+fw.close()
