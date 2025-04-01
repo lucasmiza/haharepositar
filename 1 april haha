@@ -1,0 +1,10 @@
+#kolko je v subore slov ktore zacinaju na c alebo t a koncia na a alebo e
+fr = open("words (1).txt", "r", encoding = "UTF-8")
+
+counter = 0
+for riadok in fr:
+    temp = riadok.strip() #slovicko ktore uz nema \n
+    if (temp[0] == "c" or temp[0] == "t") and (temp[-1] == "a" or temp[-1] == "e"):
+    #if (temp[0] in "ct" and temp[-1] in "ea"):
+        counter +=1
+print(counter)
