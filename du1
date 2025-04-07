@@ -1,0 +1,23 @@
+from PIL import Image
+fr = open("ciernobiely_obrazok_1.txt","r",encoding = "UTF-8")
+
+first_line = fr.readline()
+sirka, vyska = first_line.strip().split() 
+sirka = int(sirka)
+vyska = int(vyska)
+
+obrazok = Image.new("RGB", (sirka,vyska), "white")
+pixels = obrazok.load() #vytvori mapu pixelov piuxels[x,y] = (0,0,0) cierna
+riadky = 0
+for riadok in fr: 
+    temp = riadok.strip() 
+    for x in range(0, len(temp), 2): 
+        print(temp[x:x+2]) 
+        jozo = int(temp[x:x+2], 16)
+    y+= 1
+
+
+
+
+obrazok.show()
+obrazok.save("vystup.png")
