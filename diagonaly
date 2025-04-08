@@ -1,0 +1,14 @@
+from PIL import Image
+obrazok = Image.new("RGB", (50,50), "white")
+sirka, vyska = obrazok.size
+pixels = obrazok.load()
+print(sirka,vyska)
+
+for y in range (vyska):
+    for x in range (sirka):
+        if x == y:
+            pixels[x,y] = (0,0,255)
+        if (x + y)+1 == sirka:
+                pixels[x,y] = (255,0,0)
+obrazok.show()
+obrazok.save("obrazok.png")
