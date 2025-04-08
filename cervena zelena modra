@@ -1,0 +1,27 @@
+from PIL import Image
+
+obrazok = Image.open("lev_vstup.jpg")
+sirka, vyska = obrazok.size
+obr_1 = Image.new("RGB", (sirka, vyska), (255,255,255))
+obr_2 = Image.new("RGB", (sirka, vyska), (255,255,255))
+obr_3 = Image.new("RGB", (sirka, vyska), (255,255,255))
+pixels_old = obrazok.load()
+pixels_1 = obr_1.load()
+pixels_2 = obr_2.load()
+pixels_3 = obr_3.load()
+
+for y in range(vyska):
+    for x in range (sirka):
+        avg = (sum(pixels_old[x,y]))//3
+        pixels_1[x,y] = (avg,0,0)
+        pixels_2[x, y] = (0, avg, 0)
+        pixels_3[x, y] = (0, 0, avg)
+print(sirka,vyska)
+
+obr_1.save("redtiger.jpg")
+obr_2.save("greentiger.jpg")
+obr_3.save("bluetiger.jpg")
+
+obr_1.show()
+obr_2.show()
+obr_3.show()
