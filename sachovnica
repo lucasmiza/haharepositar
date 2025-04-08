@@ -1,0 +1,12 @@
+from PIL import Image
+obrazok = Image.new("RGB", (100,50), "white")
+sirka, vyska = obrazok.size
+pixels = obrazok.load()
+print(sirka,vyska)
+
+for y in range (vyska):
+    for x in range (sirka):
+        if (x+y) % 2 == 0: #alebo nerovna sa nule !=, prve bude biele
+            pixels[x,y] = (0,0,0)
+obrazok.show()
+obrazok.save("obrazok.png")
