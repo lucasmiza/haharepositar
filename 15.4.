@@ -1,0 +1,30 @@
+from PIL import Image
+img = Image.open("boat.png")
+sirka, vyska = img.size
+pixels = img.load()
+
+def kodovacka(sprava):
+    list = []
+    for i in sprava:
+        binznak = bin(ord(i))[2::]
+        #binznak = format(ord(i), "08b")
+        if len(binznak)<8:
+            chyba = 8 - len(binznak)
+            completka = chyba * "0" + binznak
+        for j in completka:
+            list.append(int(j))
+    print(list)
+    
+def drticka(sprava):
+    bin_sprava = kodovacka(sprava)
+    #bin sprava spracovavam v cykle
+    #pre kazdu hodnotu budem musiet vypocutat jej poziciu v pixel mape
+    # z tejto pozicie budem musiet zobrat tu tuplu  barieb (niekde si ju zapamatam) 
+    #zoberem farbu reprezentujucu modru a podla hodnoty v cykle  v binarke tejto farby zmenis poslednu cifu
+    #takto zmeneny pixel vratim naspat
+    #ked skonci cely cyklus obrazok savnem ako png
+    #a steganodrafia je hotova
+    
+    
+sprava = input("Napis mi spravu:")
+print(kodovacka(sprava))
