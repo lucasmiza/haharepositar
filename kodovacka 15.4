@@ -1,0 +1,14 @@
+def kodovacka(sprava):
+    list = []
+    for i in sprava:
+        binznak = bin(ord(i))[2::]
+        #binznak = format(ord(i), "08b")
+        if len(binznak)<8:
+            chyba = 8 - len(binznak)
+            completka = chyba * "0" + binznak
+        for j in completka:
+            list.append(int(j))
+    print(list)
+
+sprava = input("Napis mi spravu:")
+print(kodovacka(sprava))
