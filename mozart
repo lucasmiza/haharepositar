@@ -1,0 +1,38 @@
+import random
+import wave
+fr = open("input.txt", "r")
+fr2 = open("input2.txt", "r")
+fl = fr.readline() #nepotrebujeme prvy riadok, nacitali sme ho
+fl2 = fr2.readline()
+menuet = []
+my_menuet = []
+my_trio = []
+trio = []
+for riadok in fr:
+    temp = riadok.strip().split(" ")
+    menuet.append(temp[1::])
+
+for i in range(16):
+    c1 = random.randrange(0,6)
+    c2 = random.randrange(0,6)
+    my_menuet.append(menuet[c1+c2][i])
+
+for riadok2 in fr2:
+    temp2 = riadok2.strip().split(" ")
+    trio.append(temp2[1::])
+
+for i in range(16):
+    my_trio.append(trio[random.randrange(0,6)][i])
+
+nahravky = ["takty/M" + ton + ".wav" for ton in my_menuet]
+print(nahravky)
+
+vystup = wave.open('moj.mozart.wav', 'wb')
+nahravky1 = wave.open(nahravky[0])
+vystup.setparams(nahravky1.getparams())
+
+for i in range(len(nahravky)):
+    nahravka = wave.open(nahravky[i], 'rb')
+    vystup.writeframes(nahravka.readframes(nahravka.getnframes()))
+vystup.close()
+
